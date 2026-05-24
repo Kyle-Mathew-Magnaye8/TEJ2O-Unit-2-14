@@ -4,6 +4,7 @@
  * This program moves the pixels around the perimeter clockwise and counter clockwise. 
  */
 
+// Variables
 let sprite: game.LedSprite = null
 let loopCounterX = 0
 let loopCounterY = 0
@@ -12,7 +13,7 @@ let loopCounterY = 0
 basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 
-// When Button A is pressed, the pixels move clockwise
+// If Button A is pressed, the pixels move clockwise
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
     sprite = game.createSprite(0, 0)
@@ -21,13 +22,13 @@ input.onButtonPressed(Button.A, function () {
     loopCounterX = 0
     loopCounterY = 0
 
-    // Goes left to right (top edge)
+    // From left to right (top edge)
     while (loopCounterY <= 4) {
         sprite.set(LedSpriteProperty.X, loopCounterY)
         loopCounterY += 1
         basic.pause(350)
     }
-    loopCounterY = 4 // Lock at edge
+    loopCounterY = 4
 
     // Goes top to bottom (right edge)
     while (loopCounterX <= 4) {
@@ -35,17 +36,17 @@ input.onButtonPressed(Button.A, function () {
         loopCounterX += 1
         basic.pause(350)
     }
-    loopCounterX = 4 // Lock at edge
+    loopCounterX = 4
 
-    // Goes right to left (bottom edge)
+    // From right to left (bottom edge)
     while (loopCounterY >= 0) {
         sprite.set(LedSpriteProperty.X, loopCounterY)
         loopCounterY -= 1
         basic.pause(350)
     }
-    loopCounterY = 0 // Lock at edge
+    loopCounterY = 0 
 
-    // Goes bottom to top (left edge)
+    // From bottom to top (left edge)
     while (loopCounterX >= 0) {
         sprite.set(LedSpriteProperty.Y, loopCounterX)
         loopCounterX -= 1
@@ -65,7 +66,7 @@ input.onButtonPressed(Button.B, function () {
     loopCounterX = 0
     loopCounterY = 0
 
-    // Goes top to bottom (left edge)
+    // From top to bottom (left edge)
     while (loopCounterX <= 4) {
         sprite.set(LedSpriteProperty.Y, loopCounterX)
         loopCounterX += 1
@@ -73,7 +74,7 @@ input.onButtonPressed(Button.B, function () {
     }
     loopCounterX = 4 // Lock at edge
 
-    // Goes left to right (bottom edge)
+    // From left to right (bottom edge)
     while (loopCounterY <= 4) {
         sprite.set(LedSpriteProperty.X, loopCounterY)
         loopCounterY += 1
@@ -81,7 +82,7 @@ input.onButtonPressed(Button.B, function () {
     }
     loopCounterY = 4 // Lock at edge
 
-    // Goes bottom to top (right edge)
+    // From bottom to top (right edge)
     while (loopCounterX >= 0) {
         sprite.set(LedSpriteProperty.Y, loopCounterX)
         loopCounterX -= 1
@@ -89,7 +90,7 @@ input.onButtonPressed(Button.B, function () {
     }
     loopCounterX = 0 // Lock at edge
 
-    // Goes right to left (top edge)
+    // From right to left (top edge)
     while (loopCounterY >= 0) {
         sprite.set(LedSpriteProperty.X, loopCounterY)
         loopCounterY -= 1
