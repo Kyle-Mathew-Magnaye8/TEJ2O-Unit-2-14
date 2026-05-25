@@ -1,5 +1,5 @@
-/* * Copyright (c) 2020 MTHS All rights reserved 
- * * Created by: Kyle Matthew 
+/* Copyright (c) 2020 MTHS All rights reserved 
+ * Created by: Kyle Matthew 
  * Created on: Apr 2026 
  * This program moves the pixels around the perimeter clockwise and counter clockwise. 
  */
